@@ -3,6 +3,7 @@
 import { MotionConfig, motion, useInView } from "motion/react";
 import { ArrowUpRight, ChevronDown, Download, Globe, Mail } from "lucide-react";
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import { PixelBand, SheetPixels } from "./PixelBand";
 import { logoFor, type Resume } from "@/lib/schema";
 import { ChatPanel } from "./ChatPanel";
 import { BlurFade, BlurFadeText, STEP } from "./BlurFade";
@@ -25,7 +26,8 @@ export function ResumeSite({ resume, sendResume = false }: { resume: Resume; sen
   const [chatOpen, setChatOpen] = useState(false);
   return (
     <MotionConfig reducedMotion="user">
-    <div className="px-3 pb-28 pt-10 sm:px-6 sm:pt-16">
+    <div className="relative px-3 pb-28 pt-10 sm:px-6 sm:pt-16">
+      <PixelBand />
       <Toolbar onChat={() => setChatOpen((o) => !o)} />
       <motion.article
         initial={{ opacity: 0, y: 24 }}
@@ -33,6 +35,7 @@ export function ResumeSite({ resume, sendResume = false }: { resume: Resume; sen
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         className="sheet sheet-stack relative z-0 mx-auto max-w-[760px] rounded-2xl px-5 py-8 sm:px-12 sm:py-12"
       >
+        <SheetPixels />
         <Header resume={resume} />
         <BlurFade delay={STEP * 6}><About resume={resume} /></BlurFade>
         {resume.experience.length > 0 && <BlurFade delay={STEP * 8}><Work resume={resume} /></BlurFade>}
@@ -305,9 +308,21 @@ function Work({ resume }: { resume: Resume }) {
                         {job.start} - {job.end}
                       </p>
                     </div>
-                    <p className="font-mono text-[13px] text-ink2">
+                    <p className="flex flex-wrap items-center gap-x-1.5 font-mono text-[13px] text-ink2">
                       {job.company}
-                      {job.location ? <span className="text-ink3"> · {job.location}</span> : null}
+                      {job.location ? <span className="text-ink3">· {job.location}</span> : null}
+                      {job.url && (
+                        <a
+                          href={job.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="no-print ml-0.5 inline-flex items-center gap-1 rounded-md border border-line px-1.5 py-0.5 text-[11px] text-ink2 transition hover:border-accent/60 hover:bg-accent hover:text-on-accent"
+                        >
+                          {job.url.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "")}
+                          <ArrowUpRight className="size-3" />
+                        </a>
+                      )}
                     </p>
                     <p className="mt-1 font-mono text-[12px] leading-relaxed text-ink3">{job.summary}</p>
                   </div>

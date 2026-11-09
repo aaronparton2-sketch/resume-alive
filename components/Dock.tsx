@@ -3,7 +3,7 @@
 // Bottom dock in the style of Magic UI's portfolio (Dillion Verma, MIT licence):
 // home, your links, and the day/night switch. Icons grow as the cursor gets close.
 import { AnimatePresence, motion, useMotionValue, useSpring, useTransform, type MotionValue } from "motion/react";
-import { Home, Moon, Sun } from "lucide-react";
+import { Globe, Home, Moon, Sun } from "lucide-react";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import type { Link } from "@/lib/schema";
 import { LinkIcon } from "./icons";
@@ -21,6 +21,7 @@ export function Dock({ links }: { links: Link[] }) {
     } catch {}
   }
   const shown = links.filter((l) => ["linkedin", "github", "instagram", "youtube", "x", "tiktok"].includes(l.kind)).slice(0, 5);
+  const sites = links.filter((l) => l.kind === "website").slice(0, 3);
 
   return (
     <div className="no-print pointer-events-none fixed inset-x-0 bottom-4 z-40 flex justify-center px-3">
@@ -41,6 +42,12 @@ export function Dock({ links }: { links: Link[] }) {
             <LinkIcon kind={l.kind} className="size-[42%]" />
           </Item>
         ))}
+        {sites.length > 0 && <span className="mb-2 h-6 w-px self-end bg-line" />}
+        {sites.map((l) => (
+          <Item key={l.url} mouseX={mouseX} label={l.label} href={l.url}>
+            <SiteLogo url={l.url} />
+          </Item>
+        ))}
         <span className="mb-2 h-6 w-px self-end bg-line" />
         <Item mouseX={mouseX} label={theme === "dark" ? "Day mode" : "Night mode"} onClick={toggle}>
           <AnimatePresence mode="wait" initial={false}>
@@ -58,6 +65,23 @@ export function Dock({ links }: { links: Link[] }) {
         </Item>
       </motion.nav>
     </div>
+  );
+}
+
+/** A website's own logo: the saved copy in public/logos first, then the live logo finder. */
+function SiteLogo({ url }: { url: string }) {
+  const domain = url.replace(/^https?:\/\/(www\.)?/, "").split(/[/?#]/)[0];
+  const [src, setSrc] = useState(`/logos/${domain}.png`);
+  const [failed, setFailed] = useState(false);
+  if (failed) return <Globe className="size-[42%]" />;
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={src}
+      alt=""
+      className="size-[62%] rounded-full object-cover"
+      onError={() => (src.startsWith("/logos/") ? setSrc(`/api/logo?domain=${domain}`) : setFailed(true))}
+    />
   );
 }
 
