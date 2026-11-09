@@ -1,0 +1,30 @@
+{
+  "name": "resume-alive",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Drop in your PDF resume, get a living, clickable website. Free build from @aaronautomates.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "logos": "node scripts/fetch-logos.mjs",
+    "icons": "node scripts/fetch-icons.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.6.0",
+    "lucide-react": "^1.70.0",
+    "motion": "^14.10.1",
+    "next": "^15.5.29",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^5.9.3"
+  }
+}

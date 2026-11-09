@@ -1,0 +1,182 @@
+{
+  "android": {
+    "light": "/tech/android.svg",
+    "dark": null,
+    "invert": false
+  },
+  "apify": {
+    "light": "/tech/apify.png",
+    "dark": null,
+    "invert": false
+  },
+  "booking": null,
+  "branding": null,
+  "claude": {
+    "light": "/tech/claude.svg",
+    "dark": null,
+    "invert": false
+  },
+  "cursor": {
+    "light": "/tech/cursor.svg",
+    "dark": "/tech/cursor-dark.svg",
+    "invert": false
+  },
+  "design-systems": null,
+  "excel": {
+    "light": "/tech/excel.svg",
+    "dark": null,
+    "invert": false
+  },
+  "figma": {
+    "light": "/tech/figma.svg",
+    "dark": null,
+    "invert": false
+  },
+  "framer": {
+    "light": "/tech/framer.svg",
+    "dark": "/tech/framer-dark.svg",
+    "invert": false
+  },
+  "garmin": {
+    "light": "/tech/garmin.svg",
+    "dark": "/tech/garmin-dark.svg",
+    "invert": false
+  },
+  "github": {
+    "light": "/tech/github.svg",
+    "dark": "/tech/github-dark.svg",
+    "invert": false
+  },
+  "google-ads": {
+    "light": "/tech/google-ads.svg",
+    "dark": null,
+    "invert": false
+  },
+  "google-search-console": {
+    "light": "/tech/google-search-console.svg",
+    "dark": null,
+    "invert": false
+  },
+  "google-sheets": {
+    "light": "/tech/google-sheets.svg",
+    "dark": null,
+    "invert": false
+  },
+  "html-css": null,
+  "instagram": {
+    "light": "/tech/instagram.svg",
+    "dark": null,
+    "invert": false
+  },
+  "interaction-design": null,
+  "ios": {
+    "light": "/tech/ios.svg",
+    "dark": "/tech/ios-dark.svg",
+    "invert": false
+  },
+  "journey-mapping": null,
+  "mailchimp": {
+    "light": "/tech/mailchimp.svg",
+    "dark": null,
+    "invert": false
+  },
+  "meta": {
+    "light": "/tech/meta.svg",
+    "dark": null,
+    "invert": false
+  },
+  "monkey-c": {
+    "light": "/tech/monkey-c.png",
+    "dark": null,
+    "invert": false
+  },
+  "n8n": {
+    "light": "/tech/n8n.svg",
+    "dark": null,
+    "invert": false
+  },
+  "nextjs": {
+    "light": "/tech/nextjs.svg",
+    "dark": null,
+    "invert": false
+  },
+  "openai": {
+    "light": "/tech/openai.svg",
+    "dark": "/tech/openai-dark.svg",
+    "invert": false
+  },
+  "postgresql": {
+    "light": "/tech/postgresql.svg",
+    "dark": null,
+    "invert": false
+  },
+  "power-bi": {
+    "light": "/tech/power-bi.png",
+    "dark": null,
+    "invert": false
+  },
+  "prototyping": null,
+  "python": {
+    "light": "/tech/python.svg",
+    "dark": null,
+    "invert": false
+  },
+  "react": {
+    "light": "/tech/react.svg",
+    "dark": "/tech/react-dark.svg",
+    "invert": false
+  },
+  "reporting": null,
+  "requirements": null,
+  "scraping": null,
+  "side-project": null,
+  "sql": {
+    "light": "/tech/sql.svg",
+    "dark": null,
+    "invert": false
+  },
+  "supabase": {
+    "light": "/tech/supabase.svg",
+    "dark": null,
+    "invert": false
+  },
+  "telegram": {
+    "light": "/tech/telegram.svg",
+    "dark": null,
+    "invert": false
+  },
+  "telegram-bots": null,
+  "twilio": {
+    "light": "/tech/twilio.svg",
+    "dark": null,
+    "invert": false
+  },
+  "typescript": {
+    "light": "/tech/typescript.svg",
+    "dark": null,
+    "invert": false
+  },
+  "usability-testing": null,
+  "user-interviews": null,
+  "user-research": null,
+  "vercel": {
+    "light": "/tech/vercel.svg",
+    "dark": "/tech/vercel-dark.svg",
+    "invert": false
+  },
+  "visual-studio-code": {
+    "light": "/tech/visual-studio-code.svg",
+    "dark": null,
+    "invert": false
+  },
+  "webflow": {
+    "light": "/tech/webflow.svg",
+    "dark": null,
+    "invert": false
+  },
+  "wordpress": {
+    "light": "/tech/wordpress.svg",
+    "dark": null,
+    "invert": false
+  }
+}

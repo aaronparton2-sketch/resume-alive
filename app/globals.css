@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+/* Scan these explicitly: a parent .gitignore that skips "build" folders would hide pages otherwise. */
+@source "../app";
+@source "../components";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/*
+ * Colours. Light is the default; the toggle sets data-theme="dark" on <html>.
+ * --accent drives links, chevrons and highlights. Swap it to re-brand.
+ */
+:root {
+  --bg: #f4f4f5;
+  --bg2: #ececee;
+  --paper: #ffffff;
+  --card: #ffffff;
+  --card2: #f6f6f7;
+  --line: #e7e7ea;
+  --line2: #d9d9de;
+  --ink: #111113;
+  --ink2: #4b4b52;
+  --ink3: #8a8a93;
+  --accent: #d9622b;
+  --accent2: #b84a17;
+  --on-accent: #ffffff;
+  --good: #16a34a;
+  --sheet-shadow: 0 1px 2px rgb(0 0 0 / 0.04), 0 12px 40px -12px rgb(0 0 0 / 0.12);
+}
+
+[data-theme="dark"] {
+  --bg: #09090b;
+  --bg2: #0f0f12;
+  --paper: #111114;
+  --card: #16161a;
+  --card2: #1c1c21;
+  --line: #24242a;
+  --line2: #303038;
+  --ink: #f2f2f4;
+  --ink2: #b4b4bc;
+  --ink3: #75757e;
+  --accent: #f0a07c;
+  --accent2: #e07b4f;
+  --on-accent: #16110e;
+  --good: #3ee08f;
+  --sheet-shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 20px 60px -20px rgb(0 0 0 / 0.7);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg2: var(--bg2);
+  --color-paper: var(--paper);
+  --color-card: var(--card);
+  --color-card2: var(--card2);
+  --color-line: var(--line);
+  --color-line2: var(--line2);
+  --color-ink: var(--ink);
+  --color-ink2: var(--ink2);
+  --color-ink3: var(--ink3);
+  --color-accent: var(--accent);
+  --color-accent2: var(--accent2);
+  --color-on-accent: var(--on-accent);
+  --color-good: var(--good);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono-face), ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--accent) 30%, transparent);
+}
+
+/* The paper sheet, with two sheets peeking out behind it */
+.sheet {
+  position: relative;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: var(--sheet-shadow);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.sheet-stack::before,
+.sheet-stack::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: var(--sheet-shadow);
+  z-index: -1;
+}
+.sheet-stack::before {
+  transform: rotate(-1.1deg) translate(-4px, 7px);
+}
+.sheet-stack::after {
+  transform: rotate(0.8deg) translate(4px, 4px);
+}
+
+/* Used by the /create page */
+.grid-bg {
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, var(--ink) 5%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--ink) 5%, transparent) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 30%, transparent 75%);
+}
+.glow-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: var(--sheet-shadow);
+}
+.text-gradient {
+  background: linear-gradient(100deg, var(--ink) 20%, var(--accent) 60%, var(--accent2) 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@keyframes aurora {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(4%, -3%, 0) scale(1.08); }
+}
+.animate-aurora {
+  animation: aurora 18s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-aurora { animation: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* Print / Save as PDF: plain white page, every dropdown open, no buttons */
+@media print {
+  :root, [data-theme="dark"] {
+    --bg: #fff; --paper: #fff; --ink: #000; --ink2: #333; --ink3: #666; --line: #ddd; --line2: #ccc;
+  }
+  .no-print { display: none !important; }
+  .sheet { box-shadow: none !important; border: 0 !important; }
+  .sheet-stack::before, .sheet-stack::after { display: none; }
+  .expand-body { height: auto !important; opacity: 1 !important; overflow: visible !important; }
+  .chevron { display: none !important; }
+  body { background: #fff; }
+}

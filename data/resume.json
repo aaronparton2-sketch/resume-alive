@@ -1,0 +1,333 @@
+{
+  "name": "Aaron Parton",
+  "headline": "Analyst turned founder. I build AI automations, websites and ad systems that bring small businesses leads.",
+  "roles": [
+    "Founder, Mycelium AI",
+    "AI automation developer",
+    "Creator @aaronautomates"
+  ],
+  "location": "Perth, WA",
+  "availability": "Taking on new automation projects",
+  "avatar": "/aaron/aaron-crop2.png",
+  "about": "In May 2026 I quit my analyst job to go full time on Mycelium AI. Before that I spent five years building Power BI dashboards and SQL models for global companies. Now I build lead pipelines, websites, paid ads and AI agents for Australian businesses, from Pilbara contractors to a Perth speech pathology practice, and I open-source a lot of what I build.",
+  "email": "aaron@myceliumai.com.au",
+  "phone": "+61 498 201 788",
+  "resumePdf": null,
+  "github": "aaronparton2-sketch",
+  "links": [
+    {
+      "label": "WhatsApp",
+      "url": "https://wa.me/61498201788",
+      "kind": "whatsapp"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/aaron-parton-baa926218/",
+      "kind": "linkedin"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/aaronparton2-sketch",
+      "kind": "github"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/aaronautomates/",
+      "kind": "instagram"
+    },
+    {
+      "label": "YouTube",
+      "url": "https://www.youtube.com/@aaron-parton",
+      "kind": "youtube"
+    },
+    {
+      "label": "myceliumai.com.au",
+      "url": "https://myceliumai.com.au",
+      "kind": "website"
+    }
+  ],
+  "stats": [
+    {
+      "value": 25,
+      "prefix": null,
+      "suffix": "+",
+      "label": "businesses worked with"
+    },
+    {
+      "value": 11,
+      "prefix": null,
+      "suffix": "K",
+      "label": "followers across platforms"
+    },
+    {
+      "value": 3.1,
+      "prefix": null,
+      "suffix": "M",
+      "label": "total views"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Mycelium AI",
+      "role": "Founder",
+      "start": "2025",
+      "end": "Present",
+      "location": "Perth, WA",
+      "url": "https://myceliumai.com.au",
+      "domain": "myceliumai.com.au",
+      "logo": "/logos/mycelium-white.jpg",
+      "badge": null,
+      "summary": "Perth agency building websites, lead pipelines, paid ads and AI automations for Australian businesses.",
+      "highlights": [
+        "Worked with 25+ businesses across trades, construction, agriculture, transport and allied health.",
+        "Grundy Drilling: 234 leads from $1,037 of Meta ads, $4.43 a lead.",
+        "Every lead pipeline texts the client and me the second an enquiry lands, and logs it to their CRM.",
+        "Automated Jaylon Industries' monthly Grain Storage Review: one write-up goes to Mailchimp, WordPress, LinkedIn and Facebook.",
+        "Rated 5.0 on Google from 30+ reviews."
+      ],
+      "skills": [
+        "n8n",
+        "Claude",
+        "Twilio",
+        "Meta Ads",
+        "Google Ads",
+        "Next.js",
+        "Supabase"
+      ],
+      "media": []
+    },
+    {
+      "company": "Alcoa",
+      "role": "Procurement Analyst",
+      "start": "2023",
+      "end": "2026",
+      "location": "Perth, WA",
+      "url": "https://www.alcoa.com",
+      "domain": "alcoa.com",
+      "logo": "/logos/alcoa.com.png",
+      "badge": null,
+      "summary": "Procurement analytics for one of the world's largest aluminium producers.",
+      "highlights": [
+        "Built Power BI dashboards and SQL models to track spend and supplier performance.",
+        "Found cost-saving opportunities across global operations."
+      ],
+      "skills": [
+        "Power BI",
+        "SQL",
+        "Excel"
+      ],
+      "media": []
+    },
+    {
+      "company": "Afgri",
+      "role": "Business Analyst",
+      "start": "2021",
+      "end": "2023",
+      "location": "Perth, WA",
+      "url": "https://www.afgri.co.za",
+      "domain": "afgri.co.za",
+      "logo": "/logos/afgri.co.za.ico",
+      "badge": null,
+      "summary": "Business analysis for a global agricultural services company.",
+      "highlights": [
+        "Gathered requirements and built the reporting.",
+        "Turned operational data into clear decisions for stakeholders."
+      ],
+      "skills": [
+        "SQL",
+        "Excel"
+      ],
+      "media": []
+    }
+  ],
+  "projects": [
+    {
+      "title": "Jaylon Industries: The Grain Storage Review",
+      "description": "A monthly technical briefing for Australian grain handlers, written, built and sent for them. One write-up becomes a Mailchimp send, a WordPress article and LinkedIn and Facebook posts. It goes out on schedule and costs their team no time.",
+      "url": "https://myceliumai.com.au/our-work",
+      "dates": "2026",
+      "tags": [
+        "n8n",
+        "Claude",
+        "Mailchimp"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "url": "/work/jaylon-newsletter-full.jpg",
+          "caption": "The Grain Storage Review",
+          "hover": "scroll"
+        }
+      ]
+    },
+    {
+      "title": "Dino Earthworx: website + Meta ads",
+      "description": "An earthmoving business in Toowoomba. New site they own outright, Meta ads and SMS lead alerts: 49 leads, page one for \"earthmoving toowoomba\", and $700 a month saved.",
+      "url": "https://toowoombaearthmoving.com.au",
+      "dates": "2026",
+      "tags": [
+        "Meta Ads",
+        "Twilio",
+        "SEO"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "/work/dino-video.mp4",
+          "caption": null
+        },
+        {
+          "type": "image",
+          "url": "/work/dino.jpg",
+          "caption": "toowoombaearthmoving.com.au"
+        }
+      ]
+    },
+    {
+      "title": "Gibson Field Service: video content",
+      "description": "Short-form video for a field service business: 18,937 views against 822 before, 23x more people seeing their work.",
+      "url": "https://gibsonfieldservice.com.au",
+      "dates": "2026",
+      "tags": [
+        "Meta",
+        "Short-form video"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "/work/gibson-video.mp4",
+          "caption": null
+        },
+        {
+          "type": "image",
+          "url": "/work/gibson.jpg",
+          "caption": "gibsonfieldservice.com.au"
+        }
+      ]
+    },
+    {
+      "title": "SwellVision",
+      "description": "Live surf conditions on your Garmin watch: swell, wind, water temperature and first light. Full Monkey C source, free on the Connect IQ Store.",
+      "url": "https://github.com/aaronparton2-sketch/swellvision",
+      "dates": "2026",
+      "tags": [
+        "Monkey C",
+        "Garmin"
+      ],
+      "media": [
+        {
+          "type": "youtube",
+          "url": "https://www.youtube.com/watch?v=CUF30HzufSw",
+          "caption": "How to build a Garmin watchface using AI"
+        },
+        {
+          "type": "image",
+          "url": "https://raw.githubusercontent.com/aaronparton2-sketch/swellvision/main/docs/swellvision.png",
+          "caption": "SwellVision on a Garmin"
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "University of Western Australia",
+      "degree": "Bachelor of Commerce, Economics and Environmental Management",
+      "start": "2016",
+      "end": "2020",
+      "domain": "uwa.edu.au",
+      "logo": "/logos/uwa.edu.au.png",
+      "details": [
+        "Entered with an ATAR of 92.7",
+        "Invited to the Golden Key International Honour Society (top 15% of students)"
+      ]
+    },
+    {
+      "school": "Golden Key International Honour Society",
+      "degree": "Member",
+      "start": "Jun 2019",
+      "end": "Present",
+      "domain": "goldenkey.org",
+      "logo": "/logos/goldenkey.org.png",
+      "details": [
+        "Golden Key is a non-profit international organisation that partners with over 400 universities around the world to recognise the top 15% of high performing students in all academic disciplines."
+      ]
+    },
+    {
+      "school": "Monarch Institute",
+      "degree": "Diploma of Finance and Mortgage Broking Management (FNS50322)",
+      "start": "2024",
+      "end": "2026",
+      "domain": "monarch.edu.au",
+      "logo": "/logos/monarch.edu.au.png",
+      "details": [
+        "Completed 2 September 2026"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "group": "AI and automation",
+      "items": [
+        "Claude",
+        "OpenAI Codex",
+        "n8n",
+        "Apify",
+        "Twilio"
+      ]
+    },
+    {
+      "group": "Dev tools",
+      "items": [
+        "Claude Code",
+        "Cursor",
+        "VS Code",
+        "GitHub",
+        "Vercel"
+      ]
+    },
+    {
+      "group": "Build",
+      "items": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Python",
+        "Supabase",
+        "Postgres"
+      ]
+    },
+    {
+      "group": "Data",
+      "items": [
+        "SQL",
+        "Power BI",
+        "Excel"
+      ]
+    },
+    {
+      "group": "Growth",
+      "items": [
+        "Meta Ads",
+        "Google Ads",
+        "SEO",
+        "Mailchimp",
+        "WordPress"
+      ]
+    }
+  ],
+  "videos": [],
+  "faq": [
+    {
+      "q": "What do you build for clients?",
+      "a": "Websites, lead-generation systems and AI automations for small businesses, mostly trades and service businesses around Australia."
+    },
+    {
+      "q": "Why did you leave analytics?",
+      "a": "I was already building systems and dashboards for big companies. I wanted to build them for small businesses that can feel the difference straight away."
+    },
+    {
+      "q": "How do I work with you?",
+      "a": "Email me at aaron@myceliumai.com.au and tell me what's eating your time. I'll come back with what I'd automate first."
+    }
+  ]
+}

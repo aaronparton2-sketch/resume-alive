@@ -1,0 +1,219 @@
+{
+  "name": "Jordan Hale",
+  "headline": "Product designer who turns messy problems into things people love using.",
+  "roles": [
+    "Product designer",
+    "Design systems nerd",
+    "Part-time potter"
+  ],
+  "location": "Melbourne, VIC",
+  "availability": "Open to senior product roles",
+  "avatar": null,
+  "about": "I've spent eight years designing apps people use every day, from a banking app with 2 million customers to a two-person startup's first release. I like sitting with users, sketching fast and shipping something real by Friday. Outside work I throw pots and lose at trivia.",
+  "email": "jordan@example.com",
+  "phone": null,
+  "resumePdf": null,
+  "github": null,
+  "links": [
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/",
+      "kind": "linkedin"
+    },
+    {
+      "label": "Portfolio",
+      "url": "https://example.com",
+      "kind": "website"
+    },
+    {
+      "label": "Email",
+      "url": "mailto:jordan@example.com",
+      "kind": "email"
+    }
+  ],
+  "stats": [
+    {
+      "value": 8,
+      "prefix": null,
+      "suffix": " yrs",
+      "label": "designing products"
+    },
+    {
+      "value": 2,
+      "prefix": null,
+      "suffix": "M",
+      "label": "customers on one app"
+    },
+    {
+      "value": 34,
+      "prefix": null,
+      "suffix": "%",
+      "label": "lift in sign-ups"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Northbank",
+      "role": "Senior Product Designer",
+      "start": "Mar 2023",
+      "end": "Present",
+      "location": "Melbourne",
+      "url": null,
+      "domain": null,
+      "logo": null,
+      "badge": null,
+      "summary": "Lead designer on the everyday banking app.",
+      "highlights": [
+        "Redesigned onboarding, lifting completed sign-ups by 34%.",
+        "Built the design system now used by 6 product teams.",
+        "Ran 40+ user interviews a year and shared every one."
+      ],
+      "skills": [
+        "Figma",
+        "Design systems",
+        "User research"
+      ],
+      "media": [
+        {
+          "type": "youtube",
+          "url": "https://www.youtube.com/watch?v=aqz-KE-bpKQ",
+          "caption": "Placeholder video: swap in your own case-study walkthrough"
+        }
+      ]
+    },
+    {
+      "company": "Loop Studio",
+      "role": "Product Designer",
+      "start": "2019",
+      "end": "2023",
+      "location": "Melbourne",
+      "url": null,
+      "domain": null,
+      "logo": null,
+      "badge": null,
+      "summary": "First design hire at a small studio building apps for startups.",
+      "highlights": [
+        "Designed and shipped 9 apps from first sketch to app store.",
+        "Set up the studio's first research and testing process."
+      ],
+      "skills": [
+        "Prototyping",
+        "iOS",
+        "Android"
+      ],
+      "media": []
+    },
+    {
+      "company": "Freelance",
+      "role": "UI Designer",
+      "start": "2017",
+      "end": "2019",
+      "location": "Remote",
+      "url": null,
+      "domain": null,
+      "logo": null,
+      "badge": null,
+      "summary": "Websites and brand work for local businesses.",
+      "highlights": [
+        "Built 25+ websites for cafes, studios and trades."
+      ],
+      "skills": [
+        "Webflow",
+        "Branding"
+      ],
+      "media": []
+    }
+  ],
+  "projects": [
+    {
+      "title": "Pocket Budget",
+      "description": "A side-project budgeting app that splits every pay into buckets automatically. 3,000 people use it.",
+      "url": null,
+      "dates": "2025",
+      "tags": [
+        "iOS",
+        "Figma",
+        "Side project"
+      ],
+      "media": [
+        {
+          "type": "youtube",
+          "url": "https://www.youtube.com/watch?v=aqz-KE-bpKQ",
+          "caption": "Placeholder demo video"
+        }
+      ]
+    },
+    {
+      "title": "Clay Day",
+      "description": "Booking site for a pottery studio. Classes now sell out two weeks ahead.",
+      "url": null,
+      "dates": "2024",
+      "tags": [
+        "Webflow",
+        "Booking"
+      ],
+      "media": []
+    }
+  ],
+  "education": [
+    {
+      "school": "RMIT University",
+      "degree": "Bachelor of Design (Communication Design)",
+      "start": "2013",
+      "end": "2016",
+      "domain": "rmit.edu.au",
+      "logo": "/logos/rmit.edu.au.png",
+      "details": [
+        "Graduated with distinction",
+        "Final project: an app for finding public toilets"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "group": "Design",
+      "items": [
+        "Figma",
+        "Prototyping",
+        "Design systems",
+        "Interaction design"
+      ]
+    },
+    {
+      "group": "Research",
+      "items": [
+        "User interviews",
+        "Usability testing",
+        "Journey mapping"
+      ]
+    },
+    {
+      "group": "Build",
+      "items": [
+        "HTML/CSS",
+        "Webflow",
+        "Framer"
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "title": "Placeholder: your talk or case study goes here",
+      "url": "https://www.youtube.com/watch?v=aqz-KE-bpKQ"
+    }
+  ],
+  "faq": [
+    {
+      "q": "What kind of role are you after?",
+      "a": "A senior product design role on a team that talks to its users every week."
+    },
+    {
+      "q": "What are you proudest of?",
+      "a": "The Northbank onboarding redesign. Sign-ups went up 34% and support calls about it dropped."
+    },
+    {
+      "q": "Remote or office?",
+      "a": "Either. I'm in Melbourne and happy in the office a few days a week."
+    }
+  ]
+}
