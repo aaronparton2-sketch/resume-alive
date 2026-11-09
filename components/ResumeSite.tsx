@@ -311,18 +311,6 @@ function Work({ resume }: { resume: Resume }) {
                     <p className="flex flex-wrap items-center gap-x-1.5 font-mono text-[13px] text-ink2">
                       {job.company}
                       {job.location ? <span className="text-ink3">· {job.location}</span> : null}
-                      {job.url && (
-                        <a
-                          href={job.url}
-                          target="_blank"
-                          rel="noreferrer"
-                          onClick={(e) => e.stopPropagation()}
-                          className="no-print ml-0.5 inline-flex items-center gap-1 rounded-md border border-line px-1.5 py-0.5 text-[11px] text-ink2 transition hover:border-accent/60 hover:bg-accent hover:text-on-accent"
-                        >
-                          {job.url.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "")}
-                          <ArrowUpRight className="size-3" />
-                        </a>
-                      )}
                     </p>
                     <p className="mt-1 font-mono text-[12px] leading-relaxed text-ink3">{job.summary}</p>
                   </div>

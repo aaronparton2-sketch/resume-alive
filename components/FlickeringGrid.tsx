@@ -179,8 +179,12 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
     let lastTime = 0
     const animate = (time: number) => {
       if (!isInView) return
-
-      const deltaTime = (time - lastTime) / 1000
+      // Resume Alive: ~20fps is visually identical for flicker and far lighter
+      if (time - lastTime < 50) {
+        animationFrameId = requestAnimationFrame(animate)
+        return
+      }
+      const deltaTime = Math.min((time - lastTime) / 1000, 0.1)
       lastTime = time
 
       updateSquares(gridParams.squares, deltaTime)

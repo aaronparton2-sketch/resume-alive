@@ -6,7 +6,7 @@ import { AnimatePresence, motion, useMotionValue, useSpring, useTransform, type 
 import { Globe, Home, Moon, Sun } from "lucide-react";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import type { Link } from "@/lib/schema";
-import { LinkIcon } from "./icons";
+import { AaMark, LinkIcon, MyceliumMark } from "./icons";
 
 export function Dock({ links }: { links: Link[] }) {
   const mouseX = useMotionValue(Infinity);
@@ -31,7 +31,7 @@ export function Dock({ links }: { links: Link[] }) {
         transition={{ delay: 0.6, type: "spring", stiffness: 200, damping: 22 }}
         onMouseMove={(e) => mouseX.set(e.clientX)}
         onMouseLeave={() => mouseX.set(Infinity)}
-        className="pointer-events-auto flex h-14 items-end gap-2 rounded-2xl border border-line bg-paper/90 px-2 pb-2 shadow-[0_0_10px_3px_rgb(0_0_0/0.04)] backdrop-blur-3xl"
+        className="pointer-events-auto flex h-14 items-end gap-2 rounded-2xl border border-line bg-paper px-2 pb-2 shadow-[0_4px_20px_-4px_rgb(0_0_0/0.15)]"
       >
         <Item mouseX={mouseX} label="Home" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
           <Home className="size-[45%]" />
@@ -68,21 +68,12 @@ export function Dock({ links }: { links: Link[] }) {
   );
 }
 
-/** A website's own logo: the saved copy in public/logos first, then the live logo finder. */
+/** Websites in the dock, drawn in the same greys as every other icon. */
 function SiteLogo({ url }: { url: string }) {
   const domain = url.replace(/^https?:\/\/(www\.)?/, "").split(/[/?#]/)[0];
-  const [src, setSrc] = useState(`/logos/${domain}.png`);
-  const [failed, setFailed] = useState(false);
-  if (failed) return <Globe className="size-[42%]" />;
-  return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      src={src}
-      alt=""
-      className="size-[62%] rounded-full object-cover"
-      onError={() => (src.startsWith("/logos/") ? setSrc(`/api/logo?domain=${domain}`) : setFailed(true))}
-    />
-  );
+  if (domain.includes("aaronautomates")) return <AaMark className="w-[58%]" />;
+  if (domain.includes("myceliumai")) return <MyceliumMark className="size-[50%]" />;
+  return <Globe className="size-[42%]" />;
 }
 
 function Item({

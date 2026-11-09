@@ -11,7 +11,7 @@ export function Toolbar({ onChat }: { onChat: () => void }) {
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.4 }}
-      className="no-print fixed right-4 top-4 z-40 flex gap-1 rounded-xl border border-line bg-paper/80 p-1 shadow-lg backdrop-blur-md"
+      className="no-print fixed right-4 top-4 z-40 flex gap-1 rounded-xl border border-line bg-paper p-1 shadow-lg"
     >
       <Btn label="Save as PDF" onClick={() => window.print()}>
         <Printer className="size-4" />
