@@ -7,6 +7,8 @@ or ask the **"Ask my resume"** chat, which answers using only what's on your res
 
 Every company and school gets its **real logo automatically**, pulled from their own website.
 
+**Live demo:** https://aaron-parton-resume.vercel.app (Aaron's own resume) · [made-up example](https://aaron-parton-resume.vercel.app/example)
+
 Free build from [@aaronautomates](https://www.instagram.com/aaronautomates/).
 
 ---
