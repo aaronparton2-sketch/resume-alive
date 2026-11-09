@@ -110,6 +110,11 @@
     "dark": null,
     "invert": false
   },
+  "power-automate": {
+    "light": "/tech/power-automate.ico",
+    "dark": null,
+    "invert": false
+  },
   "power-bi": {
     "light": "/tech/power-bi.png",
     "dark": null,
@@ -128,6 +133,11 @@
   },
   "reporting": null,
   "requirements": null,
+  "sap-ariba": {
+    "light": "/tech/sap-ariba.svg",
+    "dark": null,
+    "invert": false
+  },
   "scraping": null,
   "side-project": null,
   "sql": {

@@ -9,7 +9,7 @@
   "location": "Perth, WA",
   "availability": "Taking on new automation projects",
   "avatar": "/aaron/aaron-crop2.png",
-  "about": "In May 2026 I quit my analyst job to go full time on Mycelium AI. Before that I spent five years building Power BI dashboards and SQL models for global companies. Now I build lead pipelines, websites, paid ads and AI agents for Australian businesses, from Pilbara contractors to a Perth speech pathology practice, and I open-source a lot of what I build.",
+  "about": "In May 2026 I left Alcoa to go full time on Mycelium AI. Before that I spent three years in analytics and procurement at Alcoa and AFGRI Equipment, building the Power BI dashboards and reports teams ran their decisions on. Now I build lead pipelines, websites, paid ads and AI agents for Australian businesses, from Pilbara contractors to a Perth speech pathology practice, and I open-source a lot of what I build.",
   "email": "aaron@myceliumai.com.au",
   "phone": "+61 498 201 788",
   "resumePdf": null,
@@ -69,8 +69,8 @@
   "experience": [
     {
       "company": "Mycelium AI",
-      "role": "Founder",
-      "start": "2025",
+      "role": "Founder & CEO",
+      "start": "Jun 2025",
       "end": "Present",
       "location": "Perth, WA",
       "url": "https://myceliumai.com.au",
@@ -99,43 +99,51 @@
     {
       "company": "Alcoa",
       "role": "Procurement Analyst",
-      "start": "2023",
-      "end": "2026",
-      "location": "Perth, WA",
+      "start": "Jan 2024",
+      "end": "May 2026",
+      "location": "Perth + Wagerup Refinery, WA",
       "url": "https://www.alcoa.com",
       "domain": "alcoa.com",
       "logo": "/logos/alcoa.com.png",
       "badge": null,
-      "summary": "Procurement analytics for one of the world's largest aluminium producers.",
+      "summary": "Worked right across Alcoa's procurement teams: goods and services, supply chain and operations at Wagerup Refinery, and sustaining capital projects.",
       "highlights": [
-        "Built Power BI dashboards and SQL models to track spend and supplier performance.",
-        "Found cost-saving opportunities across global operations."
+        "Built Alcoa Procurement's first Supplier Relationship Management (SRM) dashboard in Power BI, joining data from five source systems.",
+        "Built an automated civils overcharge report that checks supplier invoices against contract rates. It found six-figure overcharges and stops them recurring.",
+        "Built a Contracts Clarity dashboard that uses AI text extraction to surface key commercial terms, so buyers stop making costly mistakes.",
+        "Delivered Power BI reports (DAX, Power Query, governed data models) behind high-value tenders, sourcing decisions and supplier performance reviews.",
+        "Supported sustaining capital projects with procurement planning, supplier engagement and package tracking, working with buyers and project engineers."
       ],
       "skills": [
         "Power BI",
         "SQL",
-        "Excel"
+        "Excel",
+        "SAP Ariba",
+        "Power Automate"
       ],
       "media": []
     },
     {
-      "company": "Afgri",
-      "role": "Business Analyst",
-      "start": "2021",
-      "end": "2023",
-      "location": "Perth, WA",
-      "url": "https://www.afgri.co.za",
-      "domain": "afgri.co.za",
-      "logo": "/logos/afgri.co.za.ico",
+      "company": "AFGRI Equipment",
+      "role": "Business Intelligence Analyst, then Inventory Controller",
+      "start": "Jan 2023",
+      "end": "Dec 2023",
+      "location": "WA",
+      "url": "https://www.afgri.com.au",
+      "domain": "afgri.com.au",
+      "logo": "/logos/afgri.com.au.png",
       "badge": null,
-      "summary": "Business analysis for a global agricultural services company.",
+      "summary": "Started as a graduate BI analyst running monthly analytics, then moved into inventory control.",
       "highlights": [
-        "Gathered requirements and built the reporting.",
-        "Turned operational data into clear decisions for stakeholders."
+        "Delivered monthly financial and operational analytics to support management decisions.",
+        "Cleaned, validated and transformed ERP data to make reporting accurate.",
+        "Produced sales and inventory reports that improved stock visibility and planning.",
+        "Worked with vendors, suppliers and logistics providers to resolve data and supply problems."
       ],
       "skills": [
+        "Excel",
         "SQL",
-        "Excel"
+        "Power BI"
       ],
       "media": []
     }
@@ -232,13 +240,13 @@
     {
       "school": "University of Western Australia",
       "degree": "Bachelor of Commerce, Economics and Environmental Management",
-      "start": "2016",
-      "end": "2020",
+      "start": "Feb 2018",
+      "end": "Jul 2023",
       "domain": "uwa.edu.au",
       "logo": "/logos/uwa.edu.au.png",
       "details": [
-        "Entered with an ATAR of 92.7",
-        "Invited to the Golden Key International Honour Society (top 15% of students)"
+        "GPA of 6 and a Weighted Average Mark (WAM) of 74.5",
+        "Accepted into the Golden Key International Honour Society"
       ]
     },
     {
@@ -255,12 +263,23 @@
     {
       "school": "Monarch Institute",
       "degree": "Diploma of Finance and Mortgage Broking Management (FNS50322)",
-      "start": "2024",
-      "end": "2026",
+      "start": "Jul 2025",
+      "end": "Sep 2026",
       "domain": "monarch.edu.au",
       "logo": "/logos/monarch.edu.au.png",
       "details": [
         "Completed 2 September 2026"
+      ]
+    },
+    {
+      "school": "Mount Lawley Senior High School",
+      "degree": "WACE",
+      "start": "2012",
+      "end": "2017",
+      "domain": "lawley.wa.edu.au",
+      "logo": "/logos/lawley.wa.edu.au.png",
+      "details": [
+        "ATAR of 92.3, top 7.7% in Australia"
       ]
     }
   ],
@@ -301,7 +320,9 @@
       "items": [
         "SQL",
         "Power BI",
-        "Excel"
+        "Excel",
+        "SAP Ariba",
+        "Power Automate"
       ]
     },
     {
