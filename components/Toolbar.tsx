@@ -1,44 +1,18 @@
 "use client";
 
-import { AnimatePresence, motion } from "motion/react";
-import { MessageCircle, Moon, Printer, Sun } from "lucide-react";
-import { useEffect, useState, type ReactNode } from "react";
+import { motion } from "motion/react";
+import { MessageCircle, Printer } from "lucide-react";
+import type { ReactNode } from "react";
 
-/** Floating buttons: light/dark, ask my resume, save as PDF. */
+/** Top-right buttons: save as PDF, ask my resume. (Day/night lives in the bottom dock.) */
 export function Toolbar({ onChat }: { onChat: () => void }) {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
-  useEffect(() => {
-    setTheme(document.documentElement.dataset.theme === "dark" ? "dark" : "light");
-  }, []);
-  function toggle() {
-    const next = theme === "dark" ? "light" : "dark";
-    setTheme(next);
-    document.documentElement.dataset.theme = next;
-    try {
-      localStorage.setItem("theme", next);
-    } catch {}
-  }
   return (
     <motion.div
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.4 }}
-      className="no-print fixed bottom-4 right-4 z-40 flex gap-1 rounded-xl border border-line bg-paper/80 p-1 shadow-lg backdrop-blur-md sm:bottom-auto sm:top-4"
+      className="no-print fixed right-4 top-4 z-40 flex gap-1 rounded-xl border border-line bg-paper/80 p-1 shadow-lg backdrop-blur-md"
     >
-      <Btn label={theme === "dark" ? "Light mode" : "Dark mode"} onClick={toggle}>
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.span
-            key={theme}
-            initial={{ rotate: -90, scale: 0.5, opacity: 0 }}
-            animate={{ rotate: 0, scale: 1, opacity: 1 }}
-            exit={{ rotate: 90, scale: 0.5, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="grid place-items-center"
-          >
-            {theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
-          </motion.span>
-        </AnimatePresence>
-      </Btn>
       <Btn label="Save as PDF" onClick={() => window.print()}>
         <Printer className="size-4" />
       </Btn>

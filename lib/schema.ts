@@ -101,6 +101,28 @@ export const Resume = z.object({
   education: z.array(Education),
   skills: z.array(z.object({ group: z.string(), items: z.array(z.string()) })),
   videos: z.array(z.object({ title: z.string(), url: z.string() })),
+  /** Your content channel: a heading, a line about it and an auto-scrolling reel carousel with results */
+  social: z
+    .object({
+      handle: z.string(),
+      url: z.string(),
+      blurb: z.string(),
+      reels: z.array(
+        z.object({
+          title: z.string(),
+          url: z.string(),
+          poster: z.string(),
+          video: z.string().nullable(),
+          views: z.string(),
+          likes: z.string(),
+          comments: z.string(),
+          shares: z.string(),
+          saves: z.string(),
+        }),
+      ),
+    })
+    .nullable()
+    .optional(),
   /** Interview questions. a = the short answer; star = optional STAR breakdown shown in the dropdown */
   faq: z.array(
     z.object({

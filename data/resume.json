@@ -344,11 +344,95 @@
     },
     {
       "q": "Why did you leave analytics?",
-      "a": "I was already building systems and dashboards for big companies. I wanted to build them for small businesses that can feel the difference straight away."
+      "a": "Because you can't outwork a digital asset. At Alcoa I sold my time, and time doesn't scale. Code and content do: an automation runs while I sleep and a video keeps finding people for years. Leaving a good job looked backwards to most people, which is exactly why I did it. I'd rather work hard now on things that compound than stay comfortable on things that don't."
     },
     {
       "q": "How do I work with you?",
       "a": "Email me at aaron@myceliumai.com.au and tell me what's eating your time. I'll come back with what I'd automate first."
     }
-  ]
+  ],
+  "social": {
+    "handle": "@aaronautomates",
+    "url": "https://www.instagram.com/aaronautomates/",
+    "blurb": "I build real automations on camera, then give them away free. 11K followers and 3.1M views so far, including 1.3M views on my second ever reel.",
+    "reels": [
+      {
+        "title": "Automating a ski trip",
+        "url": "https://www.instagram.com/reel/Dc0YH-6pV11/",
+        "poster": "/reels/japow-reel.jpg",
+        "video": "/reels/japow-reel.mp4",
+        "views": "898K",
+        "likes": "34.5K",
+        "comments": "3,347",
+        "shares": "63.3K",
+        "saves": "8,119"
+      },
+      {
+        "title": "Automating a boys trip to Bali",
+        "url": "https://www.instagram.com/reel/DahhGBGJO6v/",
+        "poster": "/reels/bali-reel.jpg",
+        "video": "/reels/bali-reel.mp4",
+        "views": "1.3M",
+        "likes": "40.5K",
+        "comments": "3,048",
+        "shares": "111K",
+        "saves": "8,961"
+      },
+      {
+        "title": "Automating a boys fishing trip",
+        "url": "https://www.instagram.com/reel/DdoGDUpJZP6/",
+        "poster": "/reels/davo-reel.jpg",
+        "video": "/reels/davo-reel.mp4",
+        "views": "345K",
+        "likes": "17.5K",
+        "comments": "643",
+        "shares": "21.9K",
+        "saves": "3,538"
+      },
+      {
+        "title": "An agent that clears my calendar when the surf's on",
+        "url": "https://www.instagram.com/reel/DdQrizbpeve/",
+        "poster": "/reels/clear-my-cal-reel.jpg",
+        "video": "/reels/clear-my-cal-reel.mp4",
+        "views": "226K",
+        "likes": "5,998",
+        "comments": "1,061",
+        "shares": "13.3K",
+        "saves": "1,516"
+      },
+      {
+        "title": "Deal Radar: no more rip-offs",
+        "url": "https://www.instagram.com/reel/DewLDoopPwb/",
+        "poster": "/reels/deal-reel.jpg",
+        "video": "/reels/deal-reel.mp4",
+        "views": "80.6K",
+        "likes": "2,594",
+        "comments": "2,125",
+        "shares": "2,003",
+        "saves": "1,836"
+      },
+      {
+        "title": "Automating my girlfriend's cycle",
+        "url": "https://www.instagram.com/reel/Ded6xhKpffA/",
+        "poster": "/reels/luteal-reel.jpg",
+        "video": "/reels/luteal-reel.mp4",
+        "views": "51.3K",
+        "likes": "999",
+        "comments": "136",
+        "shares": "2,605",
+        "saves": "595"
+      },
+      {
+        "title": "Outsourced my Marketplace doomscrolling",
+        "url": "https://www.instagram.com/reel/DZwIHYipafs/",
+        "poster": "/reels/surfboard-sniper.jpg",
+        "video": "/reels/surfboard-sniper.mp4",
+        "views": "18K",
+        "likes": "285",
+        "comments": "118",
+        "shares": "368",
+        "saves": "158"
+      }
+    ]
+  }
 }

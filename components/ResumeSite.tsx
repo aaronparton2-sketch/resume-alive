@@ -5,9 +5,13 @@ import { ArrowUpRight, ChevronDown, Download, Globe, Mail } from "lucide-react";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { logoFor, type Resume } from "@/lib/schema";
 import { ChatPanel } from "./ChatPanel";
+import { BlurFade, BlurFadeText, STEP } from "./BlurFade";
+import { Dock } from "./Dock";
+import { FlickeringGrid } from "./FlickeringGrid";
 import { GitHubActivity } from "./GitHubActivity";
+import { ReelCarousel } from "./ReelCarousel";
 import { ProjectCover } from "./ProjectCover";
-import { LinkIcon } from "./icons";
+import { Instagram, LinkIcon } from "./icons";
 import { TechIcon } from "./TechIcon";
 import { Toolbar } from "./Toolbar";
 import { CountUp, MediaView, Modal, YouTubeLite, youtubeId } from "./ui";
@@ -21,7 +25,7 @@ export function ResumeSite({ resume, sendResume = false }: { resume: Resume; sen
   const [chatOpen, setChatOpen] = useState(false);
   return (
     <MotionConfig reducedMotion="user">
-    <div className="px-3 py-10 sm:px-6 sm:py-16">
+    <div className="px-3 pb-28 pt-10 sm:px-6 sm:pt-16">
       <Toolbar onChat={() => setChatOpen((o) => !o)} />
       <motion.article
         initial={{ opacity: 0, y: 24 }}
@@ -30,19 +34,20 @@ export function ResumeSite({ resume, sendResume = false }: { resume: Resume; sen
         className="sheet sheet-stack relative z-0 mx-auto max-w-[760px] rounded-2xl px-5 py-8 sm:px-12 sm:py-12"
       >
         <Header resume={resume} />
-        <About resume={resume} />
-        {resume.experience.length > 0 && <Work resume={resume} />}
-        {resume.projects.length > 0 && <Projects resume={resume} />}
+        <BlurFade delay={STEP * 6}><About resume={resume} /></BlurFade>
+        {resume.experience.length > 0 && <BlurFade delay={STEP * 8}><Work resume={resume} /></BlurFade>}
+        {resume.projects.length > 0 && <BlurFade inView delay={STEP}><Projects resume={resume} /></BlurFade>}
         {resume.github && (
           <Section title="Open source" id="github">
             <GitHubActivity user={resume.github} />
           </Section>
         )}
-        {resume.education.length > 0 && <EducationList resume={resume} />}
-        {resume.skills.length > 0 && <Skills resume={resume} />}
-        {resume.videos.length > 0 && <Videos resume={resume} />}
-        {resume.faq.length > 0 && <Faq resume={resume} />}
-        <Footer resume={resume} />
+        {resume.education.length > 0 && <BlurFade inView delay={STEP}><EducationList resume={resume} /></BlurFade>}
+        {resume.skills.length > 0 && <BlurFade inView delay={STEP}><Skills resume={resume} /></BlurFade>}
+        {resume.social && resume.social.reels.length > 0 && <BlurFade inView delay={STEP}><SocialSection social={resume.social} /></BlurFade>}
+        {resume.videos.length > 0 && <BlurFade inView delay={STEP}><Videos resume={resume} /></BlurFade>}
+        {resume.faq.length > 0 && <BlurFade inView delay={STEP}><Faq resume={resume} /></BlurFade>}
+        <BlurFade inView delay={STEP * 2}><Contact resume={resume} /></BlurFade>
       </motion.article>
       <p className="no-print mt-8 text-center font-mono text-[11px] text-ink3">
         Built with{" "}
@@ -50,6 +55,7 @@ export function ResumeSite({ resume, sendResume = false }: { resume: Resume; sen
           Resume Alive
         </a>
       </p>
+      <Dock links={resume.links} />
       <ChatPanel open={chatOpen} onClose={() => setChatOpen(false)} resume={resume} sendResume={sendResume} />
     </div>
     </MotionConfig>
@@ -174,9 +180,13 @@ function Header({ resume }: { resume: Resume }) {
   return (
     <header className="flex items-start justify-between gap-6">
       <div className="min-w-0 flex-1">
-        <h1 className="text-[28px] font-bold leading-tight tracking-tight text-ink sm:text-3xl">{resume.name}</h1>
-        <p className="mt-1.5 max-w-md font-mono text-[13px] leading-relaxed text-ink2">{resume.headline}</p>
-        <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1.5">
+        <h1 className="text-[28px] font-bold leading-tight tracking-tight text-ink sm:text-3xl">
+          <BlurFadeText text={resume.name} delay={STEP} />
+        </h1>
+        <BlurFade delay={STEP * 2}>
+          <p className="mt-1.5 max-w-md font-mono text-[13px] leading-relaxed text-ink2">{resume.headline}</p>
+        </BlurFade>
+        <BlurFade delay={STEP * 3} className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1.5">
         {resume.location && (
           <a
             href={`https://www.google.com/maps/search/${encodeURIComponent(resume.location)}`}
@@ -192,9 +202,9 @@ function Header({ resume }: { resume: Resume }) {
             <span className="text-ink3">Status:</span> {resume.availability}
           </p>
         )}
-        </div>
+        </BlurFade>
         {buttons.length > 0 && (
-          <div className="no-print mt-3 flex flex-wrap gap-1.5">
+          <BlurFade delay={STEP * 4} className="no-print mt-3 flex flex-wrap gap-1.5">
             {buttons.map((b) => (
               <a
                 key={b.href}
@@ -210,21 +220,21 @@ function Header({ resume }: { resume: Resume }) {
                 </span>
               </a>
             ))}
-          </div>
+          </BlurFade>
         )}
         {/* Printed copies get the contact details as text instead of icons */}
         <p className="hidden font-mono text-[11px] text-ink2 print:block">
           {[resume.email, resume.phone, ...resume.links.filter((l) => l.kind !== "email").map((l) => l.url)].filter(Boolean).join("  ·  ")}
         </p>
       </div>
-      <div className="size-24 shrink-0 overflow-hidden rounded-xl border border-line bg-card2 sm:size-28">
+      <BlurFade delay={STEP} className="size-24 shrink-0 overflow-hidden rounded-xl border border-line bg-card2 sm:size-28">
         {resume.avatar ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={resume.avatar} alt={resume.name} className="size-full object-cover" />
         ) : (
           <span className="grid size-full place-items-center text-2xl font-bold text-accent">{initials}</span>
         )}
-      </div>
+      </BlurFade>
     </header>
   );
 }
@@ -345,10 +355,8 @@ function Work({ resume }: { resume: Resume }) {
 function ProjectCard({ project: p, onOpen }: { project: Resume["projects"][number]; onOpen: () => void }) {
   const ref = useRef<HTMLButtonElement>(null);
   const [hovered, setHovered] = useState(false);
-  const [touch, setTouch] = useState(false);
-  const inView = useInView(ref, { amount: 0.7 });
-  useEffect(() => setTouch(window.matchMedia("(hover: none)").matches), []);
-  const active = hovered || (touch && inView);
+  const inView = useInView(ref, { amount: 0.35 });
+  const playing = inView && !hovered;
   return (
     <motion.button
       ref={ref}
@@ -360,7 +368,7 @@ function ProjectCard({ project: p, onOpen }: { project: Resume["projects"][numbe
       onBlur={() => setHovered(false)}
       className="group flex flex-col overflow-hidden rounded-xl border border-line text-left transition-colors hover:border-accent/50"
     >
-      <ProjectCover media={p.media} active={active} />
+      <ProjectCover media={p.media} visible={inView} playing={playing} />
       <div className="flex flex-1 flex-col px-3 pb-3 pt-2.5">
         <div className="flex items-start justify-between gap-2">
           <p className="text-[15px] font-semibold leading-snug text-ink">{p.title}</p>
@@ -547,17 +555,78 @@ function Faq({ resume }: { resume: Resume }) {
   );
 }
 
-function Footer({ resume }: { resume: Resume }) {
-  if (!resume.email) return null;
+/** Your content channel: a short line plus an endless reel carousel with real results. */
+function SocialSection({ social }: { social: NonNullable<Resume["social"]> }) {
   return (
-    <footer className="no-print mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-line pt-6">
-      <p className="font-mono text-[12px] text-ink3">Like what you see?</p>
-      <a
-        href={`mailto:${resume.email}`}
-        className="inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-on-accent transition hover:opacity-90"
-      >
-        <Mail className="size-4" /> Get in touch
-      </a>
-    </footer>
+    <section id="content" className="mt-9 scroll-mt-8">
+      <div className="mb-3 flex flex-wrap items-baseline justify-between gap-2">
+        <h2 className="text-xl font-bold tracking-tight text-ink">Content</h2>
+        <a
+          href={social.url}
+          target="_blank"
+          rel="noreferrer"
+          className="no-print inline-flex items-center gap-1.5 rounded-lg border border-line px-2 py-1 font-mono text-[12px] text-ink2 transition hover:border-transparent hover:bg-[linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)] hover:text-white"
+        >
+          <Instagram className="size-3.5" /> {social.handle}
+        </a>
+      </div>
+      <p className="mb-4 font-mono text-[12px] leading-relaxed text-ink2">{social.blurb}</p>
+      <div className="no-print">
+        <ReelCarousel social={social} />
+      </div>
+    </section>
+  );
+}
+
+/** Magic UI-style contact block: a pill label, a flickering grid and one clear ask. */
+function Contact({ resume }: { resume: Resume }) {
+  const wa = resume.links.find((l) => l.kind === "whatsapp")?.url;
+  const li = resume.links.find((l) => l.kind === "linkedin")?.url;
+  return (
+    <section id="contact" className="no-print relative mt-14 rounded-xl border border-line p-8 sm:p-10">
+      <div className="absolute -top-3.5 left-1/2 z-10 -translate-x-1/2 rounded-xl bg-ink px-4 py-1">
+        <span className="text-sm font-medium text-paper">Contact</span>
+      </div>
+      <div className="absolute inset-x-0 top-0 h-1/2 overflow-hidden rounded-xl">
+        <FlickeringGrid
+          className="size-full"
+          squareSize={2}
+          gridGap={2}
+          color="var(--ink)"
+          maxOpacity={0.25}
+          style={{ maskImage: "linear-gradient(to bottom, black, transparent)", WebkitMaskImage: "linear-gradient(to bottom, black, transparent)" }}
+        />
+      </div>
+      <div className="relative flex flex-col items-center gap-4 text-center">
+        <h2 className="text-3xl font-bold tracking-tighter text-ink sm:text-5xl">Get in Touch</h2>
+        <p className="mx-auto max-w-lg text-balance text-[15px] text-ink2">
+          Want to chat? Just{" "}
+          {resume.email ? (
+            <a href={`mailto:${resume.email}`} className="text-accent underline-offset-4 hover:underline">
+              send me an email
+            </a>
+          ) : (
+            "get in touch"
+          )}
+          {wa && (
+            <>
+              ,{" "}
+              <a href={wa} target="_blank" rel="noreferrer" className="text-accent underline-offset-4 hover:underline">
+                message me on WhatsApp
+              </a>
+            </>
+          )}
+          {li && (
+            <>
+              {" "}or find me on{" "}
+              <a href={li} target="_blank" rel="noreferrer" className="text-accent underline-offset-4 hover:underline">
+                LinkedIn
+              </a>
+            </>
+          )}{" "}
+          and I&apos;ll get back to you.
+        </p>
+      </div>
+    </section>
   );
 }

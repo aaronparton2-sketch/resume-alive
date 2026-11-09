@@ -156,3 +156,18 @@ body {
   .chevron { display: none !important; }
   body { background: #fff; }
 }
+
+/* Project covers marked hover:"scroll" glide down the page and back */
+@keyframes cover-scroll {
+  0%, 8% { object-position: center top; }
+  46%, 54% { object-position: center bottom; }
+  92%, 100% { object-position: center top; }
+}
+/* Reel carousel: the strip is doubled, so moving it half its width loops seamlessly */
+@keyframes reel-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - 6px)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  [style*="reel-marquee"], [style*="cover-scroll"] { animation: none !important; }
+}

@@ -70,7 +70,9 @@ It still reads like a resume: one sheet of paper, clean type. The detail hides i
 | 🔽 | **Dropdowns** | Every job, school and answer opens to show the bullet points, skills, photos and video. |
 | 🏢 | **Real company logos** | Each employer's logo is pulled from their own website automatically. No uploading. |
 | 🧰 | **Tool logos** | Claude, n8n, Figma, Excel, Power BI and hundreds more show their real logo next to the name. |
-| 🎬 | **Projects that move** | Hover a project: its video plays, or a long page scrolls top to bottom. |
+| 🎬 | **Projects that move** | Project videos play on their own as you scroll, long pages glide top to bottom, and hovering pauses them. |
+| 📱 | **Your content, with results** | An endless reel carousel with views, likes, comments, shares and saves on every video. |
+| 🧭 | **Dock + day/night** | A floating dock at the bottom: back to top, your socials and the day/night switch. |
 | 🟩 | **Your GitHub, live** | The green-squares contribution graph and your total stars, updated hourly. |
 | 📞 | **One-tap contact** | Email, call, WhatsApp, LinkedIn and the rest, each lighting up in its own brand colour. |
 | 💬 | **Ask my resume** | Visitors ask questions and Claude answers, using only what's on your resume. |
@@ -154,5 +156,6 @@ Hosting on Vercel's free plan: $0. Reading one resume with Claude: a few cents. 
 ---
 
 <p align="center">
-  Built by <a href="https://www.instagram.com/aaronautomates/"><b>@aaronautomates</b></a> · Next.js, Tailwind, Motion and the Claude API · MIT licence
+  Built by <a href="https://www.instagram.com/aaronautomates/"><b>@aaronautomates</b></a> · Next.js, Tailwind, Motion and the Claude API · MIT licence<br>
+  <sub>The dock, contact grid and blur-fade entrances are adapted from <a href="https://github.com/magicuidesign/portfolio">Magic UI's portfolio</a> by Dillion Verma (MIT).</sub>
 </p>
