@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, animate, motion, useInView } from "motion/react";
+import { AnimatePresence, animate, motion, useInView, useReducedMotion } from "motion/react";
 import { ArrowUpRight, ChevronDown, Play, X } from "lucide-react";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import type { Media } from "@/lib/schema";
@@ -35,7 +35,12 @@ export function CountUp({ value, prefix, suffix }: { value: number; prefix?: str
   const inView = useInView(ref, { once: true });
   const [shown, setShown] = useState(0);
   const decimals = (String(value).split(".")[1] ?? "").length;
+  const reduce = useReducedMotion();
   useEffect(() => {
+    if (reduce) {
+      setShown(value);
+      return;
+    }
     if (!inView) return;
     const controls = animate(0, value, {
       duration: 1.4,
@@ -43,7 +48,7 @@ export function CountUp({ value, prefix, suffix }: { value: number; prefix?: str
       onUpdate: (v) => setShown(v),
     });
     return () => controls.stop();
-  }, [inView, value]);
+  }, [inView, value, reduce]);
   return (
     <span ref={ref}>
       {prefix}

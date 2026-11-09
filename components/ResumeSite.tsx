@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView } from "motion/react";
+import { MotionConfig, motion, useInView } from "motion/react";
 import { ArrowUpRight, ChevronDown, Download, Globe, Mail } from "lucide-react";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { logoFor, type Resume } from "@/lib/schema";
@@ -20,6 +20,7 @@ import { CountUp, MediaView, Modal, YouTubeLite, youtubeId } from "./ui";
 export function ResumeSite({ resume, sendResume = false }: { resume: Resume; sendResume?: boolean }) {
   const [chatOpen, setChatOpen] = useState(false);
   return (
+    <MotionConfig reducedMotion="user">
     <div className="px-3 py-10 sm:px-6 sm:py-16">
       <Toolbar onChat={() => setChatOpen((o) => !o)} />
       <motion.article
@@ -51,6 +52,7 @@ export function ResumeSite({ resume, sendResume = false }: { resume: Resume; sen
       </p>
       <ChatPanel open={chatOpen} onClose={() => setChatOpen(false)} resume={resume} sendResume={sendResume} />
     </div>
+    </MotionConfig>
   );
 }
 
